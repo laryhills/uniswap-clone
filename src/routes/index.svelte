@@ -49,9 +49,18 @@
 			backgroundColor: 'rgba(10, 11, 13, 0.75)'
 		}
 	};
+
+	const handleOutsideClisk = () => {
+		settings = false;
+	};
 </script>
 
-<div class={style.wrapper}>
+<OutClick
+	class="content content--component"
+	on:outclick={handleOutsideClisk}
+	excludeByQuerySelector={['.js-button']}
+/>
+<div class={`${style.wrapper} content content--excluded js-button`}>
 	<div class={style.content}>
 		<div class={style.formHeader}>
 			<div>Swap</div>
@@ -60,7 +69,7 @@
 				id="dropdownButton"
 				on:click={() => (settings = !settings)}
 				type="button"
-				class={`${style.icon}`}
+				class={`${style.icon} `}
 				><GiCog />
 			</button>
 		</div>
@@ -129,7 +138,7 @@
 	{#if settings}
 		<div
 			id="dropdownSettings"
-			class="z-10 w-1/3 text-base absolute  text-[#C3C5CB]  px-4 py-2 list-none bg-[#2C2F36] rounded shadow border border-[#40444F]"
+			class="z-10 w-1/3 text-sm absolute right-[290px] text-[#C3C5CB]  px-2 py-2 list-none bg-[#2C2F36] rounded-xl shadow border-[1px] border-[#40444F]"
 		>
 			<div class={`font-semibold py-2`}>Transaction Settings</div>
 
@@ -191,6 +200,4 @@
 			</ul>
 		</div>
 	{/if}
-
-	<OutClick class="content content--component" on:outclick={() => (settings = false)} />
 </div>
