@@ -8,11 +8,11 @@
 		wrapper: `p-4 w-screen flex justify-between items-center`,
 		headerLogo: `flex w-1/4 items-center justify-start`,
 		nav: `hidden flex-1 md:flex justify-center items-center`,
-		navItemsContainer: `flex bg-[#FFFF] rounded-2xl`,
-		navItem: `px-3 py-1 m-1 flex items-center text-lg text-[1rem] cursor-pointer rounded-xl`,
-		activeNavItem: `font-semibold bg-[#F7F8FA]`,
+		navItemsContainer: `flex bg-[#191B1F] rounded-2xl`,
+		navItem: `px-3 py-1 m-1 flex items-center text-lg text-[1rem] text-[#E6E6E6] cursor-pointer rounded-xl`,
+		activeNavItem: `font-semibold text-white bg-[#212429]`,
 		buttonsContainer: `flex w-1/4 justify-end items-center`,
-		button: `flex items-center bg-[#FFFFFF] rounded-2xl mx-2 text-[0.9rem] font-semibold cursor-pointer`,
+		button: `flex items-center bg-[#191B1F] rounded-2xl mx-2 text-white text-[0.9rem] font-semibold cursor-pointer`,
 		buttonPadding: `p-2`,
 		buttonTextContainer: `h-8 hidden sm:flex items-center text-[1rem]`,
 		buttonIconContainer: `flex items-center justify-center w-4 mr-2`,
@@ -23,7 +23,7 @@
 
 <div class={style.wrapper}>
 	<div class={style.headerLogo}>
-		<img src="/logos/uniswap.png" alt="Uniswap" width="35" height="35" />
+		<img src="/logos/uniswap_logo.svg" class="change-color" alt="Uniswap" width="35" height="35" />
 	</div>
 
 	<div class={style.nav}>
@@ -67,7 +67,7 @@
 			id="dropdownButton"
 			data-dropdown-toggle="dropdown"
 			type="button"
-			class={`${style.button} ${style.buttonPadding} border hover:border-[#CED0D9]`}
+			class={`${style.button} ${style.buttonPadding} border-[1px] border-[#000000] hover:border-[#CED0D9]`}
 		>
 			<div class={`${style.buttonIconContainer} mx-2 w-1 `}>
 				<GoKebabHorizontal />
@@ -78,31 +78,31 @@
 	<!-- svelte-ignore a11y-invalid-attribute -->
 	<div
 		id="dropdown"
-		class="hidden z-10 w-44 text-base list-none bg-[#F7F8FA] rounded divide-y divide-gray-100 shadow border border-white"
+		class="hidden z-10 w-44 text-base list-none bg-[#212429] rounded divide-y divide-gray-100 shadow border border-transparent"
 	>
 		<ul class="py-1" aria-labelledby="dropdownButton">
 			<li class={``}>
-				<a href="#" class="block py-2 px-4  text-[#565A69] hover:text-black ">
+				<a href="#" class="block py-2 px-4  text-[#C3C5CB] hover:text-white ">
 					<div>About</div>
 				</a>
 			</li>
 			<li class={``}>
-				<a href="#" class="block py-2 px-4  text-[#565A69] hover:text-black ">
+				<a href="#" class="block py-2 px-4  text-[#C3C5CB] hover:text-white ">
 					<div>Help Center</div>
 				</a>
 			</li>
 			<li class={``}>
-				<a href="#" class="block py-2 px-4  text-[#565A69] hover:text-black ">
+				<a href="#" class="block py-2 px-4  text-[#C3C5CB] hover:text-white ">
 					<div>Request Features</div>
 				</a>
 			</li>
 			<li class={``}>
-				<a href="#" class="block py-2 px-4  text-[#565A69] hover:text-black ">
+				<a href="#" class="block py-2 px-4  text-[#C3C5CB] hover:text-white ">
 					<div>Discord</div>
 				</a>
 			</li>
 			<li class={``}>
-				<a href="#" class="block py-2 px-4  text-[#565A69] hover:text-black ">
+				<a href="#" class="block py-2 px-4  text-[#C3C5CB] hover:text-white ">
 					<div>Docs</div>
 				</a>
 			</li>

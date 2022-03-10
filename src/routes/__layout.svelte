@@ -4,7 +4,7 @@
 	import Header from '$lib/components/Header.svelte';
 
 	const style = {
-		wrapper: `h-screen max-h-screen h-min-screen w-screen text-black select-none flex flex-col `
+		wrapper: `bg-[#2B222D] h-screen max-h-screen h-min-screen w-screen text-black select-none flex flex-col `
 	};
 </script>
 

@@ -25,6 +25,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-icons": "^2.1.0"
+		"svelte-icons": "^2.1.0",
+		"svelte-outclick": "^3.0.0",
+		"svelte-toggle": "^3.1.0"
 	}
 }
