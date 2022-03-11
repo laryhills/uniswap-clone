@@ -2,9 +2,11 @@
 	import '../app.css';
 	import 'flowbite/dist/flowbite.css';
 	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
 	const style = {
-		wrapper: `bg-[#2B222D] h-screen max-h-screen h-min-screen w-screen text-black select-none flex flex-col `
+		wrapper: `h-screen max-h-screen h-min-screen w-screen text-black select-none flex flex-col `
+		// wrapper: `bg-[#2B222D] h-screen max-h-screen h-min-screen w-screen text-black select-none flex flex-col `
 	};
 </script>
 
@@ -33,4 +35,7 @@
 <div class={style.wrapper}>
 	<Header />
 	<slot />
+	<div class="flex flex-col h-full justify-end">
+		<Footer />
+	</div>
 </div>

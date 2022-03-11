@@ -14,21 +14,21 @@
 	let settings = false;
 
 	const style = {
-		wrapper: `w-screen flex items-center justify-center mt-14 text-white`,
-		content: `relative bg-[#000000] w-auto sm:w-[30rem] rounded-2xl px-2 pt-4  shadow-lg`,
-		formHeader: `px-1 flex items-center justify-between font-semibold text-[1rem]`,
-		transferPropContainer: `bg-[#212429] my-2 rounded-2xl px-2 py-4 text-xl border border-transparent hover:border-[#CED0D9]  flex items-center justify-between`,
+		wrapper: `w-screen flex items-center justify-center mt-14 text-white px-4 md:px-0`,
+		content: `relative bg-[#191B1F] w-full sm:!w-[35rem] rounded-2xl px-2 pt-4 shadow-lg`,
+		formHeader: `px-2 py-1 flex items-center justify-between font-semibold text-[1rem]`,
+		transferPropContainer: `bg-[#212429] my-2 rounded-3xl px-2 py-4 text-xl border border-transparent hover:border-[#CED0D9]  flex items-center justify-between`,
 		transferPropInput: `bg-transparent p-1 placeholder:text-[#B2B9D2] font-sans1 border-transparent focus:border-transparent focus:ring-0 mb-3 w-full text-3xl `,
 		currencySelector: `flex w-1/4`,
 		currencySelectorOutgoing: `flex w-1/4 `,
-		currencySelectorContent: `w-full h-min flex justify-between items-center shadow-lg bg-[#2F2F36] hover:bg-[#40444F] rounded-full text-lg font-medium cursor-pointer p-2 mt-[-0.2rem]`,
-		currencySelectorContentOutgoing: `w-full h-min flex justify-between items-center shadow-lg bg-[#2F2F36] hover:bg-[#40444F] rounded-full text-lg font-medium cursor-pointer p-2 mt-[-0.2rem]`,
+		currencySelectorContent: `w-full h-min flex justify-between items-center shadow-lg bg-[#2F2F36] hover:bg-[#40444F] rounded-3xl text-lg font-medium cursor-pointer px-2 py-[0.1rem] mt-[-0.2rem]`,
+		currencySelectorContentOutgoing: `w-full h-min flex justify-between items-center shadow-lg bg-[#2F2F36] hover:bg-[#40444F] rounded-3xl text-lg font-medium cursor-pointer px-2 py-[0.1rem] mt-[-0.2rem]`,
 		// currencySelectorContentOutgoing: `w-full h-min flex justify-between items-center shadow-lg text-white bg-[#E8006F] hover:bg-[#CF0063] rounded-2xl text-lg font-medium cursor-pointer p-2 mt-[-0.2rem]`,
-		currencySelectorIcon: `flex items-center w-96`,
+		currencySelectorIcon: `flex items-center w-72 h-12`,
 		currencySelectorTicker: `ml-2 mx-1`,
-		currencySelectorArrow: `text-lg`,
+		currencySelectorArrow: `px-1 text-sm`,
 		currencySelectorArrowOutgoing: `text-lg w-6`,
-		confirmButton: `bg-[#133662] my-2 rounded-2xl text-[#5090EA] hover:bg-[#133662] py-3 px-8 text-base font-semibold flex items-center justify-center cursor-pointer`,
+		confirmButton: `bg-[#153D6F]/[.44] my-2 rounded-2xl text-[#5090EA] hover:bg-[#133662]/[.44] py-4 px-8 text-normal font-semibold flex items-center justify-center cursor-pointer`,
 		icon: `w-6`,
 		settingButton: `my-2 w-min shadow-lg bg-[#2172E5] rounded-full text-sm text-white font-medium cursor-pointer p-2 mt-[-0.2rem]`,
 		settingInput: `bg-transparent px-3 py-1 font-sans1 border-transparent focus:border-transparent rounded-full focus:ring-0 w-full text-sm `
@@ -70,7 +70,23 @@
 				on:click={() => (settings = !settings)}
 				type="button"
 				class={`${style.icon} `}
-				><GiCog />
+			>
+				<!-- <GiCog /> -->
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="Settings__StyledMenuIcon-sc-fxnuer-0 iAihK"
+					><circle cx="12" cy="12" r="3" /><path
+						d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+					/></svg
+				>
 			</button>
 		</div>
 		<div class={style.transferPropContainer}>
@@ -94,11 +110,21 @@
 			<div class={style.currencySelector}>
 				<div class={style.currencySelectorContent}>
 					<div class={style.currencySelectorIcon}>
-						<img src="/logos/eth.png" alt="eth" />
+						<img src="/logos/eth.png" alt="eth" width="30" height="30" />
 					</div>
 					<div class={style.currencySelectorTicker}>ETH</div>
 					<div class={style.currencySelectorArrow}>
-						<IoIosArrowDown />
+						<!-- <IoIosArrowDown /> -->
+						<svg
+							width="20"
+							height="10"
+							viewBox="0 0 12 7"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+							class="CurrencyInputPanel__StyledDropDown-sc-db1zdq-8 HBfqJ"
+						>
+							<path d="M0.97168 1L6.20532 6L11.439 1" stroke="#AEAEAE" />
+						</svg>
 					</div>
 				</div>
 			</div>
@@ -133,7 +159,16 @@
 					</div>
 					<div class={style.currencySelectorTicker}>USDT</div>
 					<div class={style.currencySelectorArrow}>
-						<IoIosArrowDown />
+						<svg
+							width="20"
+							height="10"
+							viewBox="0 0 12 7"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+							class="CurrencyInputPanel__StyledDropDown-sc-db1zdq-8 HBfqJ"
+						>
+							<path d="M0.97168 1L6.20532 6L11.439 1" stroke="#AEAEAE" />
+						</svg>
 					</div>
 				</div>
 			</div>

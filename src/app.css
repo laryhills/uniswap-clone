@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	background-color: rgb(33, 36, 41) !important;
+	color: rgb(255, 255, 255);
+}
+
 #background-radial-gradient {
 	position: fixed;
 	top: 0;
